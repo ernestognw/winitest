@@ -4,28 +4,37 @@ import { MainContainer, MainButton, Licenciado, LogoImg } from './elements';
 import licenciadoImg from 'static/licenciado.gif';
 
 class Main extends Component {
-  state = {
-    loading: false
+  componentDidMount = () => {
+    const { init, changeSlide } = this.props;
+    init &&
+      setTimeout(() => {
+        changeSlide(2);
+      }, 3000);
   };
 
   handleClick = () => {
-    this.setState({ loading: true });
+    const { changeSlide, setInit } = this.props;
+    setInit(true);
+    setTimeout(() => {
+      changeSlide(2);
+    }, 3000);
   };
 
   render() {
-    const { loading } = this.state;
+    const { init } = this.props;
+
     return (
       <Layout>
         <MainContainer>
-          {loading === false && (
+          {init === false && (
             <Fragment>
               <LogoImg src={licenciadoImg} />
-              <MainButton onClick={this.handleClick}>
+              <MainButton onClick={this.handleClick} className="title">
                 Haz click aquí para ganar un concurso
               </MainButton>
             </Fragment>
           )}
-          {loading && (
+          {init && (
             <Fragment>
               <Licenciado src={licenciadoImg} />
               <p>Espera un momento, un licenciado está construyendo tu idea</p>

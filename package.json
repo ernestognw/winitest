@@ -25,6 +25,7 @@
     "nodemon": "^1.18.10",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-md-icon": "^1.13.0",
     "react-scripts": "2.1.5",
     "styled-components": "^4.1.3"
   },
