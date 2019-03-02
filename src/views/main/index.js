@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Layout from 'components/layout';
-import { MainContainer, MainButton, Licenciado } from './elements';
+import { MainContainer, MainButton, Licenciado, LogoImg } from './elements';
 import licenciadoImg from 'static/licenciado.gif';
 
 class Main extends Component {
@@ -18,14 +18,17 @@ class Main extends Component {
       <Layout>
         <MainContainer>
           {loading === false && (
-            <MainButton onClick={this.handleClick}>
-              Haz click aquí para ganar un concurso
-            </MainButton>
+            <Fragment>
+              <LogoImg src={licenciadoImg} />
+              <MainButton onClick={this.handleClick}>
+                Haz click aquí para ganar un concurso
+              </MainButton>
+            </Fragment>
           )}
           {loading && (
             <Fragment>
               <Licenciado src={licenciadoImg} />
-              <p>Espera un momento, un licenciado está</p>
+              <p>Espera un momento, un licenciado está construyendo tu idea</p>
             </Fragment>
           )}
         </MainContainer>

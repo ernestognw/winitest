@@ -8,7 +8,7 @@
     "build:client": "react-scripts build",
     "test:client": "react-scripts test",
     "eject:client": "react-scripts eject",
-    "start:server": "DEBUG=winitest-server* nodemon server/index.js --exec babel-node"
+    "start:server": "set DEBUG=winitest-server* & nodemon server/index.js --exec babel-node"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
@@ -40,5 +40,8 @@
     "ignore": [
       "src/*"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
   }
 }
