@@ -43,5 +43,8 @@
     "ignore": [
       "src/*"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
   }
 }

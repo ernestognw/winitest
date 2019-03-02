@@ -8,9 +8,9 @@ const MainContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-   p{
-     font-size: 20px;
-   }
+  p {
+    font-size: 20px;
+  }
 `;
 
 const MainButton = styled.div`
@@ -31,10 +31,15 @@ const MainButton = styled.div`
   }
 `;
 
+const LogoImg = styled.img`
+  height: 200px;
+  width: auto;
+`;
+
 const Licenciado = styled.img`
   width: 200px;
   height: 200px;
   margin-bottom: 40px;
 `;
 
-export { MainContainer, MainButton, Licenciado };
+export { MainContainer, MainButton, Licenciado, LogoImg };
