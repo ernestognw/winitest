@@ -1,12 +1,16 @@
-# import * from "target.graphql"
+# import * from "profile.graphql"
+# import * from "industry.graphql"
 # import * from "problem.graphql"
 # import * from "category.graphql"
 # import * from "technology.graphql"
 # import * from "advantage.graphql"
 
 type Query {
-  # Target queries
-  targetRandom: Target
+  # Profile queries
+  profileRandom: Profile
+  
+  # Industry queries
+  industryRandom: Industry
 
   # Problem queries
   problemRandom: Problem

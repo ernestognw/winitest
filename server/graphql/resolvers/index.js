@@ -1,5 +1,8 @@
-// Target stuff
-import targetQueries from "./target/queries";
+// Profile stuff
+import profileQueries from "./profile/queries";
+
+// Industry stuff
+import industryQueries from "./Industry/queries";
 
 // Problem stuff
 import problemQueries from "./problem/queries";
@@ -16,7 +19,8 @@ import advantageQueries from "./advantage/queries";
 
 const resolvers = {
   Query: {
-    ...targetQueries,
+    ...profileQueries,
+    ...industryQueries,
     ...problemQueries,
     ...categoryQueries,
     ...technologyQueries,

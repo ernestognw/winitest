@@ -1,4 +1,5 @@
-export { default as Target } from './target';
+export { default as Profile } from './profile';
+export { default as Industry } from './industry';
 export { default as Problem } from './problem';
 export { default as Category } from './category';
 export { default as Technology } from './technology';

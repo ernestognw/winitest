@@ -1,6 +1,6 @@
 import Debug from "debug";
 import mongoose from "mongoose";
-import { Target, Problem, Advantage, Technology, Category } from "./models";
+import { Profile, Industry, Problem, Advantage, Technology, Category } from "./models";
 import { mongoUrl } from "../config";
 
 const debug = new Debug("winitest-api:db");
@@ -14,8 +14,11 @@ const drop = async () => {
 
   debug("🗑  Cleaning Database...");
 
-  // Drop targets
-  await Target.deleteMany();
+  // Drop profiles
+  await Profile.deleteMany();
+  
+  // Drop industries
+  await Industry.deleteMany();
 
   // Drop problems
   await Problem.deleteMany();
