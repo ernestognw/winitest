@@ -9,7 +9,7 @@ import advantages from "./seeds/advantages.json";
 import { Profile, Industry, Problem, Advantage, Technology, Category } from "./models";
 import { mongoUrl } from "../config";
 
-const debug = new Debug("bam-api:db");
+const debug = new Debug("winitest-api:db");
 
 const seed = async () => {
   await mongoose.connect(mongoUrl, {
