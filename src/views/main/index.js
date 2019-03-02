@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Layout from 'components/layout';
 import { MainContainer, MainButton, Licenciado, LogoImg } from './elements';
 import licenciadoImg from 'static/licenciado.gif';
+import logoImg from 'static/logo-original.svg';
 
 class Main extends Component {
   componentDidMount = () => {
@@ -28,7 +29,7 @@ class Main extends Component {
         <MainContainer>
           {init === false && (
             <Fragment>
-              <LogoImg src={licenciadoImg} />
+              <LogoImg src={logoImg} />
               <MainButton onClick={this.handleClick} className="title">
                 Haz click aquí para ganar un concurso
               </MainButton>
@@ -37,7 +38,7 @@ class Main extends Component {
           {init && (
             <Fragment>
               <Licenciado src={licenciadoImg} />
-              <p>Espera un momento, un licenciado está construyendo tu idea</p>
+              <p>Espera un momento, un licenciado está pensando en una idea</p>
             </Fragment>
           )}
         </MainContainer>
