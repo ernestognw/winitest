@@ -1,8 +1,9 @@
-import React, { Component, Fragment } from 'react';
-import Layout from 'components/layout';
-import { MainContainer, MainButton, Licenciado, LogoImg } from './elements';
-import licenciadoImg from 'static/licenciado.gif';
-import logoImg from 'static/logo-original.svg';
+import React, { Component, Fragment } from "react";
+import Layout from "components/layout";
+import { MainContainer, MainButton, Licenciado, LogoImg } from "./elements";
+import licenciadoImg from "static/licenciado.gif";
+import logoImg from "static/logo-original.svg";
+import { withApollo } from "react-apollo";
 
 class Main extends Component {
   componentDidMount = () => {
@@ -13,16 +14,8 @@ class Main extends Component {
       }, 3000);
   };
 
-  handleClick = () => {
-    const { changeSlide, setInit } = this.props;
-    setInit(true);
-    setTimeout(() => {
-      changeSlide(2);
-    }, 3000);
-  };
-
   render() {
-    const { init } = this.props;
+    const { init, handleClick } = this.props;
 
     return (
       <Layout>
@@ -30,7 +23,7 @@ class Main extends Component {
           {init === false && (
             <Fragment>
               <LogoImg src={logoImg} />
-              <MainButton onClick={this.handleClick} className="title">
+              <MainButton onClick={handleClick} className="title">
                 Haz click aquí para ganar un concurso
               </MainButton>
             </Fragment>
@@ -47,4 +40,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default withApollo(Main);
