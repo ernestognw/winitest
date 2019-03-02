@@ -1,0 +1,6 @@
+# Types
+
+type Category {
+  id: ID!
+  content: String!
+}

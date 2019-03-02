@@ -1,0 +1,6 @@
+# Types
+
+type Target {
+  id: ID!
+  content: String!
+}
