@@ -31,7 +31,7 @@ const MainButton = styled.div`
 `;
 
 const LogoImg = styled.img`
-  height: 200px;
+  height: 150px;
   width: auto;
   margin-bottom: 70px;
 `;

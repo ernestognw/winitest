@@ -15,7 +15,7 @@ class Details extends Component {
     const { setInit } = this.props;
     setInit(false);
   };
-  
+
   render() {
     const { changeSlide, setInit } = this.props;
     return (
@@ -57,7 +57,7 @@ class Details extends Component {
             }}>
             Probar otra idea
           </Button>
-          <Button>Generar logotipo mamador</Button>
+          <Button>Generar logotipo</Button>
         </Buttons>
       </DetailsContainer>
     );
