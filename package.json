@@ -2,16 +2,30 @@
   "name": "winitest",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "concurrently -r \"yarn start:server\" \"yarn start:client\"",
+    "start:client": "react-scripts start",
+    "build:client": "react-scripts build",
+    "test:client": "react-scripts test",
+    "eject:client": "react-scripts eject",
+    "start:server": "DEBUG=winitest-server* nodemon server/index.js --exec babel-node"
+  },
   "dependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "apollo-server-express": "^2.4.8",
+    "debug": "^4.1.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "graphql": "^14.1.1",
+    "graphql-import": "^0.7.1",
+    "graphql-tools": "^4.0.4",
+    "mongoose": "^5.4.16",
+    "nodemon": "^1.18.10",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +35,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "nodemonConfig": {
+    "ignore": [
+      "src/*"
+    ]
+  }
 }

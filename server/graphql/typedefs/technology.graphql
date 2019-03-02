@@ -1,0 +1,6 @@
+# Types
+
+type Technology {
+  id: ID!
+  content: String!
+}
