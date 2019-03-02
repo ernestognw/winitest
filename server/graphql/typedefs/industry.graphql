@@ -1,6 +1,6 @@
 # Types
 
-type Target {
+type Industry {
   id: ID!
   content: String!
 }
