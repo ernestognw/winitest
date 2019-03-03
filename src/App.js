@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import Main from 'views/main';
 import Details from 'views/details';
+import Logo from 'views/logo';
 
 class App extends Component {
   state = {
-    slide: 1,
+    slide: 3,
     init: false
   };
 
@@ -25,6 +26,7 @@ class App extends Component {
         {slide === 2 && (
           <Details changeSlide={this.changeSlide} setInit={this.setInit} />
         )}
+        {slide === 3 && <Logo changeSlide={this.changeSlide} />}
       </Fragment>
     );
   }
