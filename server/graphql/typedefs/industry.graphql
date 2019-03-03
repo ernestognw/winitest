@@ -1,0 +1,6 @@
+# Types
+
+type Industry {
+  id: ID!
+  content: String!
+}

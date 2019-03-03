@@ -1,0 +1,6 @@
+# Types
+
+type Profile {
+  id: ID!
+  content: String!
+}

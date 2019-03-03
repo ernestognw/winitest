@@ -1,0 +1,7 @@
+# Types
+
+type Problem {
+  id: ID!
+  content: String!
+  complement: String!
+}

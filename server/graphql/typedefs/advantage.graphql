@@ -1,0 +1,6 @@
+# Types
+
+type Advantage {
+  id: ID!
+  content: String!
+}
