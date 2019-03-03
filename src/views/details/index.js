@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   DetailsContainer,
   MamadorTitle,
@@ -7,14 +7,16 @@ import {
   TechItem,
   Buttons,
   Button
-} from "./elements";
-import RoundCode from "react-md-icon/dist/RoundCode";
+} from './elements';
+import RoundCode from 'react-md-icon/dist/RoundCode';
 
 class Details extends Component {
   componentDidMount = () => {
     const { setInit } = this.props;
     setInit(false);
   };
+
+  capitalize = name => name.charAt(0).toUpperCase() + name.slice(1);
 
   render() {
     const {
@@ -31,10 +33,10 @@ class Details extends Component {
     } = this.props;
     return (
       <DetailsContainer>
-        <MamadorTitle className="title">Titulo mamador</MamadorTitle>
+        <MamadorTitle className="title">{this.capitalize(name)}</MamadorTitle>
         <MamadorDescription>
-          Para {`${profile} de la industria ${industry}`}, que {problem}, {name} es {category} que {problemComplement}. Nuestra solución
-          utiliza:
+          Para {`${profile} de la industria ${industry}`}, que {problem}, {name}{' '}
+          es {category} que {problemComplement}. Nuestra solución utiliza:
         </MamadorDescription>
         <TechList>
           {technologies.map((technology, id) => (
@@ -49,8 +51,7 @@ class Details extends Component {
             onClick={() => {
               changeSlide(1);
               refetchIdea();
-            }}
-          >
+            }}>
             Probar otra idea
           </Button>
           <Button onClick={() => changeSlide(3)}>Generar logotipo</Button>

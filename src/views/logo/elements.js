@@ -30,7 +30,8 @@ const LogoImg = styled.img`
 `;
 
 const CompanyName = styled.div`
-  font-size: 1.7rem;
+  font-size: 2.5rem;
+  font-weight: 600;
   margin-top: 30px;
 `;
 

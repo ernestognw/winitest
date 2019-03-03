@@ -8,7 +8,6 @@ import {
   Thinking
 } from './elements';
 import img from 'static/money.gif';
-const image = require(`../../static/logos/${parseInt(Math.random() * 15)}.svg`);
 
 class Logo extends Component {
   state = {
@@ -21,9 +20,14 @@ class Logo extends Component {
     }, 4000);
   };
 
+  capitalize = name => name.charAt(0).toUpperCase() + name.slice(1);
+
   render() {
-    const { changeSlide } = this.props;
+    const { changeSlide, name } = this.props;
     const { show } = this.state;
+    const image = require(`../../static/logos/${parseInt(
+      Math.random() * 15
+    )}.svg`);
 
     return (
       <LogoContainer show={show}>
@@ -35,7 +39,7 @@ class Logo extends Component {
         ) : (
           <Fragment>
             <LogoImg src={image} />
-            <CompanyName>Nombre</CompanyName>
+            <CompanyName>{this.capitalize(name)}</CompanyName>
             <Buttons>
               <Button onClick={() => changeSlide(1)}>Finalizar</Button>
             </Buttons>

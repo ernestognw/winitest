@@ -8,7 +8,7 @@ const MainContainer = styled.div`
   align-items: center;
   justify-content: center;
   p {
-    font-size: 20px;
+    font-size: 25px;
   }
 `;
 

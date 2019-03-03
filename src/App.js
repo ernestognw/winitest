@@ -1,9 +1,10 @@
-import React, { Component, Fragment } from "react";
-import Main from "views/main";
-import Details from "views/details";
-import { GET_IDEA_DATA } from "./requests";
-import { withApollo } from "react-apollo";
-import name from '@rstacruz/startup-name-generator'
+import React, { Component, Fragment } from 'react';
+import Main from 'views/main';
+import Details from 'views/details';
+import Logo from 'views/logo';
+import { GET_IDEA_DATA } from './requests';
+import { withApollo } from 'react-apollo';
+import name from '@rstacruz/startup-name-generator';
 
 class App extends Component {
   constructor(props) {
@@ -11,16 +12,16 @@ class App extends Component {
     this.state = {
       slide: 1,
       init: false,
-      profileRandom: "",
-      industryRandom: "",
+      profileRandom: '',
+      industryRandom: '',
       problemRandom: {
-        content: "",
-        complement: "",
+        content: '',
+        complement: ''
       },
-      categoryRandom: "",
+      categoryRandom: '',
       technologiesRandom: [],
-      advantageRandom: "",
-      nameRandom: ""
+      advantageRandom: '',
+      nameRandom: ''
     };
   }
 
@@ -38,22 +39,22 @@ class App extends Component {
       industryRandom: data.industryRandom.content,
       problemRandom: {
         content: data.problemRandom.content,
-        complement: data.problemRandom.complement,
+        complement: data.problemRandom.complement
       },
       categoryRandom: data.categoryRandom.content,
       technologiesRandom: data.technologiesRandom,
-      advantageRandom: data.advantageRandom.content,
+      advantageRandom: data.advantageRandom.content
     });
-    let keywordsString = "";
+    let keywordsString = '';
     for (let i = 0; i < this.state.technologiesRandom.length; i++) {
-      keywordsString += this.state.technologiesRandom[i].content
-      if(i !== this.state.technologiesRandom.length) {
-        keywordsString += " ";
+      keywordsString += this.state.technologiesRandom[i].content;
+      if (i !== this.state.technologiesRandom.length) {
+        keywordsString += ' ';
       }
     }
     this.setState({
       nameRandom: name(keywordsString)[0]
-    })
+    });
     setTimeout(() => {
       this.changeSlide(2);
     }, 3000);
@@ -96,7 +97,9 @@ class App extends Component {
             refetchIdea={this.handleClick}
           />
         )}
-        {slide === 3 && <Logo changeSlide={this.changeSlide} />}
+        {slide === 3 && (
+          <Logo changeSlide={this.changeSlide} name={nameRandom} />
+        )}
       </Fragment>
     );
   }
