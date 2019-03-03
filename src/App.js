@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react';
-import Main from 'views/main';
-import Details from 'views/details';
-import Logo from 'views/logo';
-import { GET_IDEA_DATA } from './requests';
-import { withApollo } from 'react-apollo';
-import name from '@rstacruz/startup-name-generator';
+import React, { Component, Fragment } from "react";
+import Main from "views/main";
+import Logo from "views/logo";
+import Details from "views/details";
+import { GET_IDEA_DATA } from "./requests";
+import { withApollo } from "react-apollo";
+import name from '@rstacruz/startup-name-generator'
 
 class App extends Component {
   constructor(props) {
@@ -97,9 +97,7 @@ class App extends Component {
             refetchIdea={this.handleClick}
           />
         )}
-        {slide === 3 && (
-          <Logo changeSlide={this.changeSlide} name={nameRandom} />
-        )}
+        {slide === 3 && <Logo name={nameRandom} changeSlide={this.changeSlide} />}
       </Fragment>
     );
   }
