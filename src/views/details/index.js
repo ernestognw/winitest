@@ -53,7 +53,7 @@ class Details extends Component {
           >
             Probar otra idea
           </Button>
-          <Button>Generar logotipo</Button>
+          <Button onClick={() => changeSlide(3)}>Generar logotipo</Button>
         </Buttons>
       </DetailsContainer>
     );

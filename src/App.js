@@ -96,6 +96,7 @@ class App extends Component {
             refetchIdea={this.handleClick}
           />
         )}
+        {slide === 3 && <Logo changeSlide={this.changeSlide} />}
       </Fragment>
     );
   }
