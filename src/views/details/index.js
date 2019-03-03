@@ -31,7 +31,7 @@ class Details extends Component {
     } = this.props;
     return (
       <DetailsContainer>
-        <MamadorTitle className="title">Titulo mamador</MamadorTitle>
+        <MamadorTitle className="title">{name}</MamadorTitle>
         <MamadorDescription>
           Para {`${profile} de la industria ${industry}`}, que {problem}, {name} es {category} que {problemComplement}. Nuestra solución
           utiliza:

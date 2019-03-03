@@ -8,9 +8,9 @@
     "build:client": "react-scripts build",
     "test:client": "react-scripts test",
     "eject:client": "react-scripts eject",
-    "start:server": "set DEBUG=winitest-server* nodemon server/index.js --exec babel-node",
-    "db:seed": "yarn run db:drop && set DEBUG=winitest-api* babel-node server/db/seed.js",
-    "db:drop": "set DEBUG=winitest-api* babel-node server/db/drop.js"
+    "start:server": "DEBUG=winitest-server* nodemon server/index.js --exec babel-node",
+    "db:seed": "yarn run db:drop && DEBUG=winitest-api* babel-node server/db/seed.js",
+    "db:drop": "DEBUG=winitest-api* babel-node server/db/drop.js"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",

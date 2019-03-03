@@ -22,7 +22,7 @@ class Logo extends Component {
   };
 
   render() {
-    const { changeSlide } = this.props;
+    const { changeSlide, name } = this.props;
     const { show } = this.state;
 
     return (
@@ -35,7 +35,7 @@ class Logo extends Component {
         ) : (
           <Fragment>
             <LogoImg src={image} />
-            <CompanyName>Nombre</CompanyName>
+            <CompanyName>{name}</CompanyName>
             <Buttons>
               <Button onClick={() => changeSlide(1)}>Finalizar</Button>
             </Buttons>

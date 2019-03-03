@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Main from "views/main";
+import Logo from "views/logo";
 import Details from "views/details";
 import { GET_IDEA_DATA } from "./requests";
 import { withApollo } from "react-apollo";
@@ -96,7 +97,7 @@ class App extends Component {
             refetchIdea={this.handleClick}
           />
         )}
-        {slide === 3 && <Logo changeSlide={this.changeSlide} />}
+        {slide === 3 && <Logo name={nameRandom} changeSlide={this.changeSlide} />}
       </Fragment>
     );
   }
