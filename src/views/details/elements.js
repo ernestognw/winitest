@@ -3,8 +3,10 @@ import styled from 'styled-components';
 const DetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 70px 200px;
+  padding: 70px 20px;
   font-size: 1.3rem;
+
+
 `;
 
 const MamadorTitle = styled.p`
