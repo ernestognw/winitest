@@ -20,6 +20,7 @@ type Query {
 
   # Technology queries
   technologyRandom: Technology
+  technologiesRandom: [Technology]
 
   # Advantage queries
   advantageRandom: Advantage
