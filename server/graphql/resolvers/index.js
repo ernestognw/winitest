@@ -2,7 +2,7 @@
 import profileQueries from "./profile/queries";
 
 // Industry stuff
-import industryQueries from "./Industry/queries";
+import industryQueries from "./industry/queries";
 
 // Problem stuff
 import problemQueries from "./problem/queries";
